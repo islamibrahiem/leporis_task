@@ -69,22 +69,27 @@ class _SecondPageState extends State<SecondPage> {
                       scrollDirection: Axis.vertical,
                       itemCount: dataLength.length,
                       itemBuilder: (BuildContext context, int index) {
-                        return ListTile(
-                          leading: new Image.network(
-                              'https://image.tmdb.org/t/p/w92${data["results"][index]["poster_path"]}'),
-                          title: new Text(
-                            "${data["results"][index]["title"]}",
-                            style: new TextStyle(
-                                fontSize: 17.0,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black),
-                          ),
-                          subtitle: new Text(
-                            '${data["results"][index]["overview"]}',
-                            style: new TextStyle(
-                                fontSize: 10.0,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.red),
+                        return new Container(
+                          padding: EdgeInsets.all(25.0),
+                          child: new Container(
+                            child: ListTile(
+                              leading: new Image.network(
+                                  'https://image.tmdb.org/t/p/w92${data["results"][index]["poster_path"]}'),
+                              title: new Text(
+                                "${data["results"][index]["title"]}",
+                                style: new TextStyle(
+                                    fontSize: 17.0,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black),
+                              ),
+                              subtitle: new Text(
+                                '${data["results"][index]["overview"]}',
+                                style: new TextStyle(
+                                    fontSize: 10.0,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.red),
+                              ),
+                            ),
                           ),
                         );
                       }),
