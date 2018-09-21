@@ -31,7 +31,6 @@ class _SecondPageState extends State<SecondPage> {
         builder: (BuildContext context, AsyncSnapshot movie) {
           Map data = movie.data;
 
-
           if (movie.hasError) {
             print(movie.error);
             return Text('Failed to get response from the server',
@@ -109,7 +108,6 @@ class _SecondPageState extends State<SecondPage> {
     setState(() {
       var resBody = json.decode(response.body);
       dataLength = resBody["results"];
-
     });
     return json.decode(response.body);
   }
