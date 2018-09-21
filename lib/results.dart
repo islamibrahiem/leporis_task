@@ -83,7 +83,7 @@ class _SecondPageState extends State<SecondPage> {
                                     color: Colors.black),
                               ),
                               subtitle: new Text(
-                                '${data["results"][index]["overview"]}',
+                                '${data["results"][index]["overview"]}',//s
                                 style: new TextStyle(
                                     fontSize: 10.0,
                                     fontWeight: FontWeight.bold,
