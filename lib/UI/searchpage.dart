@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:leporis_task/results.dart';
+import 'package:leporis_task/UI/movieResults.dart';
 
 class FirstPage extends StatelessWidget {
   var _movieNameController = new TextEditingController();

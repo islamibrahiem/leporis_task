@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:leporis_task/searchpage.dart';
+import 'package:leporis_task/UI/searchpage.dart';
 
 void main() {
   runApp(MaterialApp(
