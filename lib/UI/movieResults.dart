@@ -111,25 +111,32 @@ class _SecondPageState extends State<SecondPage> {
                               return new Container(
                                 padding: EdgeInsets.all(25.0),
                                 child: new Container(
-                                  child: ListTile(
-                                    leading: new Image.network(
-                                        'https://image.tmdb.org/t/p/w92${movies[index].posterPath}'),
-                                    title: new Text(
-                                      "${movies[index].title}",
-                                      style: new TextStyle(
-                                          fontSize: 17.0,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.black),
+                                    child: Column(
+                                  children: <Widget>[
+                                    Container(
+                                      color: Colors.lightBlue,
+                                      child: ListTile(
+                                        leading: new Image.network(
+                                            'https://image.tmdb.org/t/p/w92${movies[index].posterPath}'),
+                                        title: new Text(
+                                          "${movies[index].title}",
+                                          style: new TextStyle(
+                                              fontSize: 17.0,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.black),
+                                        ),
+                                        subtitle: new Text(
+                                          '${movies[index].overview}',
+                                          style: new TextStyle(
+                                              fontSize: 13.0,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.orange),
+                                        ),
+                                      ),
+                                      padding: EdgeInsets.all(15.0),
                                     ),
-                                    subtitle: new Text(
-                                      '${movies[index].overview}',
-                                      style: new TextStyle(
-                                          fontSize: 10.0,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.red),
-                                    ),
-                                  ),
-                                ),
+                                  ],
+                                )),
                               );
                             }),
                       ),
