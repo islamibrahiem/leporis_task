@@ -100,7 +100,6 @@ class _SecondPageState extends State<SecondPage> {
                     movies.addAll(dataBodyParsed.results);
                     dataBodyParsed.results.clear();
                     // movies = dataBodyParsed.results;
-
                     return new Container(
                       child: new Center(
                         child: ListView.builder(
